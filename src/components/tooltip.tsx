@@ -22,13 +22,14 @@ export default function Tooltip({ top, left, content }) {
         left,
       }}
       className="fixed
--translate-x-1/2
+-translate-x-2/3
 bg-black
 text-white
 p-1
 rounded
 whitespace-nowrap
 text-sm
+tooltip
 "
     >
       {content}

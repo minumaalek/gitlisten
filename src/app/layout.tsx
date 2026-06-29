@@ -33,10 +33,10 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className={`min-h-full flex flex-col ${inter.className}`}>
+      <body className={`h-screen flex flex-col ${inter.className}`}>
         <Header />
         <ModalProvider>
-          {children}
+          <div className="mt-18 h-full">{children}</div>
           <Modal />
         </ModalProvider>
         <div id="modal-root"></div>
