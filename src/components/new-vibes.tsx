@@ -1,12 +1,11 @@
-import VibeCard from "./vibe-card";
 import Link from "next/link";
-export default function TopVibes() {
+export default function NewVibes() {
   return (
     <>
       <div className="flex flex-col ">
         <div className="flex justify-between items-center w-3/4">
           <Link href={"/vibes"}>
-            <h3>Top vibes</h3>
+            <h3>New vibes</h3>
           </Link>
         </div>
         <div className="w-5/6 h-16 bg-white">

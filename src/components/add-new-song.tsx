@@ -18,7 +18,7 @@ export default function AddNewSong() {
   };
   return (
     <button onClick={newButtonHandler} className="secondary">
-      New
+      Add
     </button>
   );
 }

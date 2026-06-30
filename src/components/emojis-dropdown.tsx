@@ -22,28 +22,22 @@ export default function EmojisDropdown() {
   }, []);
   return (
     <div
-      className="flex flex-col w-full justify-center items-center relative"
+      className="flex flex-col w-full justify-center items-center"
       ref={dropdownRef}
     >
       <button
-        className="size-10 text-xl flex justify-center items-center hover:bg-gray-400 bg-gray-300 z-20"
+        className="size-10 text-xl flex justify-center items-center hover:bg-gray-300 bg-gray-200 border border-gray-400 z-10"
         onClick={() => setOpenEmojis((prev) => !prev)}
       >
         💅
       </button>
       <div
-        className={`w-8 bg-amber-500 rounded-full flex flex-col items-center absolute top-2 overflow-y-auto ${openEmojis ? "max-h-32 visible" : "max-h-0 invisible"} transition-all duration-200`}
+        className={`shadow-sm border gap-1 border-gray-200 shadow-black absolute top-40 w-8 bg-gray-400 rounded-full flex flex-col items-center overflow-y-auto ${openEmojis ? "max-h-36 visible" : "max-h-0 invisible"} transition-all duration-300`}
       >
-        <p>🎧</p>
-        <p>🎧</p>
-        <p>🎧</p>
-        <p>🎧</p>
-        <p>🎧</p>
-        <p>🎧</p>
-        <p>🎧</p>
-        <p>🎧</p>
-        <p>🎧</p>
-        <p>🎧</p>
+        <ul className="mt-8">
+          <li className="hover:bg-gray-500 rounded-full p-1">🎧</li>
+          <li className="hover:bg-gray-500 rounded-full p-1">🎧</li>
+        </ul>
       </div>
     </div>
   );

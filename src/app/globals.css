@@ -34,9 +34,17 @@ nav {
   .blurring,
   button,
   .clickable,
+  div,
   i,
   .icon {
-    @apply transition-all duration-200 cursor-pointer;
+    @apply transition-all duration-200;
+  }
+  li {
+    @apply rounded-md;
+  }
+  input[type="text"],
+  textarea {
+    @apply cursor-text;
   }
   button {
     @apply rounded-full text-white w-20 h-8;

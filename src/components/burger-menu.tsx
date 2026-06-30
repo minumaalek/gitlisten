@@ -23,7 +23,7 @@ export function BurgerMenu() {
         ))}
       </div>
       <div
-        className={`z-50 w-screen h-screen inset-0 absolute blurring ${openMenu ? "opacity-100 visible" : "opacity-0 invisible"}  `}
+        className={`z-50 w-screen h-screen inset-0 fixed blurring ${openMenu ? "opacity-100 visible" : "opacity-0 invisible"}  `}
         onClick={closeHandler}
       >
         <div
