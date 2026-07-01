@@ -32,7 +32,7 @@ export default function EmojisDropdown() {
         💅
       </button>
       <div
-        className={`shadow-sm border gap-1 border-gray-200 shadow-black absolute top-40 w-8 bg-gray-400 rounded-full flex flex-col items-center overflow-y-auto ${openEmojis ? "max-h-36 visible" : "max-h-0 invisible"} transition-all duration-300`}
+        className={`shadow-sm border gap-1 border-gray-200 shadow-black absolute top-40 w-8 bg-gray-400 rounded-full flex flex-col items-center overflow-y-auto ${openEmojis ? "max-h-36 visible" : "max-h-0 invisible"} transition-all duration-500`}
       >
         <ul className="mt-8">
           <li className="hover:bg-gray-500 rounded-full p-1">🎧</li>

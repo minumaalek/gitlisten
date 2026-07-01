@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/header";
 import { Inter } from "next/font/google";
 import { ModalProvider, Modal } from "@/contexts/modal";
+import { BurgerMenu } from "@/components/burger-menu";
 const inter = Inter({
   subsets: ["latin"],
 });
@@ -34,9 +35,13 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className={`h-screen flex flex-col ${inter.className}`}>
-        <Header />
+        <nav className=" px-4 py-10 gap-2 w-screen h-20 flex items-center justify-center">
+          <BurgerMenu />
+          <Header />
+        </nav>
+
         <ModalProvider>
-          <div className="mt-18 h-full">{children}</div>
+          <div className="mt-10 h-full">{children}</div>
           <Modal />
         </ModalProvider>
         <div id="modal-root"></div>

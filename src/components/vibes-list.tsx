@@ -10,7 +10,7 @@ export default function VibesList() {
     </li>
   );
   return (
-    <ul className="flex flex-col gap-2">
+    <ul className="flex flex-col gap-2 w-full">
       {[...Array(3)].map((_, index) => {
         return <div key={index}>{vibe}</div>;
       })}
