@@ -6,7 +6,7 @@ export default function AddNewSong() {
   const newButtonHandler = () => {
     openModal(
       <form action="">
-        <div className="size-60 md:size-96 bg-white shadowed rounded-2xl border-2 border-gray-300 flex flex-col items-center justify-center p-5 gap-3">
+        <div className="flex flex-col size-full items-center justify-center gap-3">
           <h2>New vibe!</h2>
           <input type="text" placeholder="Short explanation" />
           <textarea placeholder="description" />
@@ -17,7 +17,10 @@ export default function AddNewSong() {
     );
   };
   return (
-    <button onClick={newButtonHandler} className="secondary">
+    <button
+      onClick={newButtonHandler}
+      className="primary fixed md:static rounded-full size-16 md:w-20 md:h-8 bottom-5 right-5 shadow-sm md:shadow-none shadow-black"
+    >
       Add
     </button>
   );

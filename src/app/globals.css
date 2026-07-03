@@ -23,7 +23,7 @@ nav {
 
 @layer base {
   body {
-    @apply cursor-default;
+    @apply cursor-default overflow-hidden;
   }
 
   .primary,
@@ -47,13 +47,13 @@ nav {
     @apply cursor-text;
   }
   button {
-    @apply rounded-full text-white w-20 h-8;
+    @apply rounded-full text-white p-1 w-20 h-8 cursor-pointer;
   }
   .primary {
-    @apply bg-(--primaryColor) hover:bg-(--primaryHover);
+    @apply bg-(--primaryColor) border border-amber-700 hover:bg-(--primaryHover);
   }
   .secondary {
-    @apply bg-gray-400 hover:bg-gray-500;
+    @apply bg-gray-400 hover:bg-gray-500 border border-gray-600;
   }
   IMG {
     @apply hover:border-(--primaryColor) border-2;

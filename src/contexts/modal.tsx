@@ -49,11 +49,13 @@ export function Modal() {
 
   return createPortal(
     <div
-      className={`fixed inset-0 h-screen w-screen blurring flex items-center justify-center ${isOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}
+      className={`fixed inset-0 h-screen w-screen blurring flex items-center justify-center ${isOpen ? "opacity-100 visible" : "opacity-0 invisible"} z-20`}
       onClick={closeModal}
     >
       <div className=" " onClick={(e) => e.stopPropagation()}>
-        {content}
+        <div className="size-80 md:size-96 bg-white shadowed rounded-2xl border-2 border-gray-300 flex flex-col overflow-hidden  p-3 gap-3 z-30">
+          {content}
+        </div>
       </div>
     </div>,
     document.getElementById("modal-root"),

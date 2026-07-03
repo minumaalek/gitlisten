@@ -32,9 +32,13 @@ export default function Profile({ image, name, email }) {
               <span> | </span>
               <span>{email}</span>
             </div>
-            <div onClick={(e) => e.stopPropagation()}>
+            <div
+              className="w-full flex justify-center gap-2"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button className="primary">Profile</button>
               <form action={signOut}>
-                <button type="submit" className="primary">
+                <button type="submit" className="secondary">
                   sign out
                 </button>
               </form>
