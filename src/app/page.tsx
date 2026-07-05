@@ -12,7 +12,6 @@ export default function Home() {
       <IntroVibes title="New" />
       <IntroVibes title="Top" />
       <Feed />
-      <NewVibeForm />
     </div>
   );
 }

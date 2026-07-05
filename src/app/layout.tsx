@@ -35,13 +35,13 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className={`h-screen flex flex-col ${inter.className}`}>
-        <nav className=" px-4 py-10 gap-2 w-screen h-20 flex items-center justify-center">
+        <nav className=" px-4 py-10 gap-2 w-screen h-20 flex items-center justify-center fixed">
           <BurgerMenu />
           <Header />
         </nav>
 
         <ModalProvider>
-          <div className="mt-10 h-full">{children}</div>
+          <div className="mt-36 h-full">{children}</div>
           <Modal />
         </ModalProvider>
         <div id="modal-root"></div>

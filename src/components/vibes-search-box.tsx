@@ -1,10 +1,14 @@
+"use client";
 import EmojisDropdown from "./emojis-dropdown";
+import { useState } from "react";
 
 export default function VibesSearchBox() {
+  const [emoji, setEmoji] = useState("👌");
+
   return (
     <div className="flex bg-gray-100 rounded-full w-7/8">
       <div className=" left-12">
-        <EmojisDropdown />
+        <EmojisDropdown value={emoji} onChange={setEmoji} />
       </div>
       <div className=" flex items-center justify-between overflow-hidden">
         <input

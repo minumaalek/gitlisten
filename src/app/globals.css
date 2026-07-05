@@ -23,7 +23,7 @@ nav {
 
 @layer base {
   body {
-    @apply cursor-default overflow-scroll;
+    @apply cursor-default overflow-clip;
   }
 
   .primary,
