@@ -11,7 +11,7 @@ export default function UserPreview({ username }: string) {
         <div className="flex items-center gap-3">
           <div className="size-12 bg-blue-400 rounded-full"></div>
           <div className="flex flex-col gap-1">
-            <span>username</span>
+            <span>{username}</span>
             <button className="secondary w-full">view on github</button>
           </div>
         </div>

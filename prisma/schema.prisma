@@ -10,7 +10,7 @@ generator client {
 
 datasource db {
   provider = "sqlite"
-  url: "env("DATABASE_URL")"
+
 
 }
 
@@ -64,6 +64,17 @@ model VerificationToken {
 
 model Vibe{
   id String @id @default(cuid())
+  emoji String
   vibe String
-  description Strings
+  description String
+  embed String
+  creator String
+  createdAt DateTime @default(now())
+}
+  model Comment{
+  id String @id @default(cuid())
+  vibeId String
+  username String
+  text String
+  embed String?
 }
