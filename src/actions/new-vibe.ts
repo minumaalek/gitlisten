@@ -5,6 +5,7 @@ import { auth } from "@/auth";
 import type { Vibe } from "@/generated/prisma/client";
 import { redirect } from "next/navigation";
 import { db } from "@/db";
+import { getGithubUsername } from "@/lib/github";
 // import paths from "@/path";
 import { revalidatePath } from "next/cache";
 const vibeSchema = z.object({
@@ -52,13 +53,18 @@ export async function createVibe(
   }
   let vibe: Vibe;
   try {
+    const githubUsername = await getGithubUsername(session.user.id);
     vibe = await db.vibe.create({
       data: {
         emoji: result.data.emoji,
         vibe: result.data.vibe,
         description: result.data.description,
         embed: result.data.embed,
-        creator: session.user.id,
+        creator: {
+          connect: {
+            id: session.user.id,
+          },
+        },
       },
     });
   } catch (err: unknown) {
