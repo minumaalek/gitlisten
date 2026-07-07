@@ -1,31 +1,40 @@
 "use client";
-import { useState } from "react";
+
 import { useModal } from "@/contexts/modal";
-import VibesList from "./vibes-list";
-export default function UserPreview({ username }: string) {
-  const [profileVisible, setProfileVisible] = useState(false);
+
+export default function UserPreview({ username }: { username: string }) {
   const { openModal } = useModal();
-  const clickHandler = () => {
+
+  const clickHandler = async () => {
+    const response = await fetch(`/api/users/${username}`);
+    const user = await response.json();
+
     openModal(
-      <div className=" w-full flex flex-col items-start gap-2">
+      <div className="w-full flex flex-col items-start gap-2">
         <div className="flex items-center gap-3">
           <div className="size-12 bg-blue-400 rounded-full"></div>
+
           <div className="flex flex-col gap-1">
-            <span>{username}</span>
-            <button className="secondary w-full">view on github</button>
+            <span>{user.username}</span>
+
+            <button className="secondary">View on GitHub</button>
           </div>
         </div>
-        <div className="border-t-2 border-gray-300 w-full flex flex-col items-center py-3">
-          <div className="overflow-y-auto h-56 md:h-72 w-full">
-            <VibesList />
-          </div>
+
+        <div className="border-t-2 border-gray-300 w-full pt-3">
+          {user.vibes.map((vibe: any) => (
+            <div key={vibe.id}>
+              {vibe.emoji} {vibe.vibe}
+            </div>
+          ))}
         </div>
       </div>,
     );
   };
+
   return (
     <div onClick={clickHandler}>
-      <i className="text-sm">{username}</i>
+      <i>{username}</i>
     </div>
   );
 }

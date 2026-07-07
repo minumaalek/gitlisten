@@ -1,11 +1,10 @@
-"use server";
 import Link from "next/link";
 import UserPreview from "./user-preview";
 import { db } from "@/db";
 export default async function VibesList() {
   const vibes = await db.vibe.findMany({
     include: {
-      creator: true, //says go and find the related users
+      creator: true, //says go and find the related users || select * from vibe join user on vibe.creator.id == user.id
     },
   });
 

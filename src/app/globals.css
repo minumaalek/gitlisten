@@ -37,7 +37,7 @@ nav {
   div,
   i,
   .icon {
-    @apply transition-all duration-200;
+    @apply transition-all duration-200 cursor-pointer;
   }
   li {
     @apply rounded-md;
