@@ -10,7 +10,7 @@ export default function VibesSearchBox() {
   const searchParams = useSearchParams();
   const searchRef = useRef<HTMLInputElement>(null);
 
-  const addCategory = () => {
+  const addQuery = () => {
     const params = new URLSearchParams(searchParams.toString());
 
     params.set("emoji", emoji);
@@ -33,7 +33,7 @@ export default function VibesSearchBox() {
         />
         <button
           className=" right-2 secondary flex justify-center items-center"
-          onClick={addCategory}
+          onClick={addQuery}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

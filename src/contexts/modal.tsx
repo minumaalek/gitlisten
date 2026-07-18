@@ -53,7 +53,7 @@ export function Modal() {
       onClick={closeModal}
     >
       <div className=" " onClick={(e) => e.stopPropagation()}>
-        <div className="size-80 md:size-96 bg-white shadowed rounded-2xl border-2 border-gray-300 flex flex-col overflow-hidden  p-3 gap-3 z-30">
+        <div className="size-80 md:size-96 bg-white shadowed rounded-2xl border-2 border-gray-300 flex flex-col overflow-hidden h-full justify-center items-center p-3 gap-3 z-30">
           {content}
         </div>
       </div>

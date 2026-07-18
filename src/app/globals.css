@@ -56,7 +56,7 @@ nav {
     @apply bg-gray-400 hover:bg-gray-500 border border-gray-600;
   }
   IMG {
-    @apply hover:border-(--primaryColor) border-2;
+    @apply rounded-full size-full;
   }
 
   Link {
@@ -72,14 +72,14 @@ nav {
     @apply text-xl;
   }
   input {
-    @apply rounded-full h-10 w-64;
+    @apply rounded-full h-10 w-full;
   }
   input,
   textarea {
     @apply bg-gray-100 px-3 outline-0 focus:bg-gray-300;
   }
   textarea {
-    @apply h-20 rounded-3xl  w-64 resize-none;
+    @apply h-20 rounded-3xl w-full resize-none;
   }
   .shadowed {
     @apply shadow-md shadow-black;

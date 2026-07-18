@@ -1,6 +1,6 @@
 import Link from "next/link";
 import VibesList from "./vibes-list";
-export default function IntroVibes({ title }) {
+export default function IntroVibes({ title, vibes }) {
   return (
     <>
       <div className="flex flex-col ">
@@ -10,7 +10,7 @@ export default function IntroVibes({ title }) {
           </Link>
         </div>
         <div className="h-60 overflow-y-auto">
-          <VibesList />
+          <VibesList vibes={vibes} />
         </div>
       </div>
     </>

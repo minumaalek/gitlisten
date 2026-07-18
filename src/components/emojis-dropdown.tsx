@@ -18,7 +18,6 @@ export default function EmojisDropdown({ value, onChange }) {
   ];
 
   const [openEmojis, setOpenEmojis] = useState(false);
-  const [selectedEmoji, setSelectedEmoji] = useState(value);
 
   const dropdownRef = useRef(null);
 
@@ -37,7 +36,7 @@ export default function EmojisDropdown({ value, onChange }) {
   }, []);
   return (
     <div
-      className="flex flex-col w-full justify-center items-center"
+      className="flex flex-col w-full justify-center items-center relative"
       ref={dropdownRef}
     >
       <button
@@ -48,7 +47,7 @@ export default function EmojisDropdown({ value, onChange }) {
         {value}
       </button>
       <div
-        className={`shadow-sm border gap-1 border-gray-200 shadow-black absolute top-52 w-8 bg-gray-400 rounded-full flex flex-col items-center overflow-y-auto ${openEmojis ? "max-h-36 visible" : "max-h-0 invisible"} transition-all duration-500`}
+        className={`shadow-sm border gap-1 border-gray-200 shadow-black absolute top-2 w-8 bg-gray-400 rounded-full flex flex-col items-center overflow-y-auto ${openEmojis ? "max-h-36 visible" : "max-h-0 invisible"} transition-all duration-500`}
       >
         <ul className="mt-6">
           {emojis.map((emoji, i) => (

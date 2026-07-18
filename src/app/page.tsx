@@ -1,3 +1,4 @@
+import { db } from "@/db";
 export const metadata = {
   title: "Gitlisten",
   description: "What songs are git people listening to? ",
@@ -7,12 +8,17 @@ import IntroVibes from "@/components/intro-vibes";
 import Feed from "@/components/feed";
 import NewVibeForm from "@/components/new-vibe-form";
 export default async function Home() {
+  const vibes = await db.vibe.findMany({
+    include: {
+      creator: true, //says go and find the related users || select * from vibe join user on vibe.creator.id == user.id.
+    },
+  });
   const session = await auth();
 
   return (
     <div className="grid grid-rows-3 md:grid-cols-3 p-3  gap-2 ">
-      <IntroVibes title="New" />
-      <IntroVibes title="Top" />
+      <IntroVibes title="New" vibes={vibes} />
+      <IntroVibes title="Top" vibes={vibes} />
       <Feed />
     </div>
   );
