@@ -22,11 +22,11 @@ export default function VibesList({ vibes }) {
           <li
             onClick={() => setVibeId(vibe.id)}
             key={index}
-            className="flex justify-between items-center bg-gray-200 w-full p-3 cursor-pointer hover:bg-gray-300"
+            className="flex justify-between items-center bg-gray-200 w-96  p-3 h-12 cursor-pointer hover:bg-gray-300"
           >
-            <div className="flex">
+            <div className="flex flex-1 min-w-0 gap-2">
               <div>{vibe.emoji}</div>
-              <Link href={""}>{vibe.vibe}</Link>
+              <span className="truncate">{vibe.vibe}</span>
             </div>
             <UserPreview username={vibe.creator.username!} />
           </li>

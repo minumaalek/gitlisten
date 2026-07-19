@@ -6,7 +6,7 @@ interface CommentProps {
 
 export default function Comment({ comment }: CommentProps) {
   return (
-    <li className="mb-3 w-full rounded-lg bg-gray-200 p-3">
+    <div className="mb-3 w-full rounded-lg bg-gray-200 p-3">
       <div className="flex items-center gap-2">
         <span className="font-semibold">
           {comment.user.username ?? comment.user.name ?? "Anonymous"}
@@ -14,6 +14,6 @@ export default function Comment({ comment }: CommentProps) {
       </div>
 
       <p className="mt-2 whitespace-pre-wrap">{comment.content}</p>
-    </li>
+    </div>
   );
 }

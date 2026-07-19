@@ -16,10 +16,14 @@ export default async function Home() {
   const session = await auth();
 
   return (
-    <div className="grid grid-rows-3 md:grid-cols-3 p-3  gap-2 ">
-      <IntroVibes title="New" vibes={vibes} />
-      <IntroVibes title="Top" vibes={vibes} />
-      <Feed />
+    <div className="grid grid-rows-3 md:grid-cols-2 p-3 ">
+      <div className="flex flex-col md:flex-row gap-2">
+        <IntroVibes title="New" vibes={vibes} />
+        <IntroVibes title="Top" vibes={vibes} />
+      </div>
+      <div className=" md:ml-10">
+        <Feed />
+      </div>
     </div>
   );
 }

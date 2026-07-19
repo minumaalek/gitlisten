@@ -3,8 +3,8 @@ import VibesList from "./vibes-list";
 export default function IntroVibes({ title, vibes }) {
   return (
     <>
-      <div className="flex flex-col ">
-        <div className="flex justify-between items-center w-3/4">
+      <div className="flex flex-col items-start justify-start">
+        <div className="">
           <Link href={"/vibes"}>
             <h2>{title} vibes</h2>
           </Link>

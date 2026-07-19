@@ -35,7 +35,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className={`h-screen flex flex-col ${inter.className}`}>
-        <nav className=" px-4 py-10 gap-2 w-screen h-20 flex items-center justify-center fixed">
+        <nav className=" px-4 py-10 z-50 gap-2 w-screen h-20 flex items-center justify-center fixed">
           <BurgerMenu />
           <Header />
         </nav>

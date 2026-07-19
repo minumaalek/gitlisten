@@ -30,6 +30,8 @@ rounded
 whitespace-nowrap
 text-sm
 tooltip
+hidden
+md:block
 "
     >
       {content}
